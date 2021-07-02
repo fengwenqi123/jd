@@ -5,8 +5,8 @@
 更新时间: 2021.01.28 18:40 v1.92
 有效接口: 40+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-电报频道: @NobyDa 
-问题反馈: @NobyDa_bot 
+电报频道: @NobyDa
+问题反馈: @NobyDa_bot
 如果转载: 请注明出处
 
 *************************
@@ -16,7 +16,7 @@
 开启抓包app后, Safari浏览器登录 https://bean.m.jd.com/bean/signIndex.action 点击签到并且出现签到日历后, 返回抓包app搜索关键字 functionId=signBean 复制请求头Cookie填入以下Key处的单引号内即可 */
 require('dotenv').config()
 
-var Key = process.env.JD_COOKIE //单引号内自行填写您抓取的Cookie
+var Key = '__jdu=1609290917531408410078; shshshfpa=134c4747-59f8-1489-de04-426f490e5f79-1609290919; shshshfpb=lO3D2PpBAQ5gObcKMxko5Lg%3D%3D; pinId=dBiZtPPG7rK2svyae-GoarV9-x-f3wj7; pin=360506239-683129; unick=jd_%E6%97%A0%E5%90%8D%E5%B0%8F%E8%BE%88; _tp=YM%2FHXd3JNxCo6WV7w7uP%2F%2BO8W%2BCYA1YnqMEHu8Sc10I%3D; _pst=360506239-683129; areaId=15; ipLoc-djd=15-1213-1214-0; TrackID=1P5cif1cODzvL6EJ9tJphgbjZxmhBBT7gERDS-SeGcvPiRm2TNRr9BO02z7ILOXkW2b_Tp4mmxXR0TWCPBDIv64WCPx2B9Y2KBK3NKkhooXMxyVnd178b9sEXDneJDR-N; __jda=76161171.1609290917531408410078.1609290917.1623994587.1624341048.66; __jdc=76161171; PCSYCityID=CN_330000_330100_330110; unpl=V2_ZzNtbRYFS0d3XEdXchlZBGJUQQ4SU0MTIVgUAH9JVQZmChNbclRCFnUUR1NnGl8UZwYZXUJcQxVFCEdkeBBVAWMDE1VGZxBFLV0CFSNGF1wjU00zQwBBQHcJFF0uSgwDYgcaDhFTQEJ2XBVQL0oMDDdRFAhyZ0AVRQhHZHseXQ1kCxNVQlFHF3UNR11%2bGV0EYQoibUVncyV9DEVdeR1sBFcCIh8WC0EUfA9BUDYZWwRvABpcSldFEXcIQ1VyHFwEZgUbbUNnQA%3d%3d; __jdv=76161171|baidu-pinzhuan|t_288551095_baidupinzhuan|cpc|0f3d30c8dba7459bb52f2eb5eba8ac7d_0_ec9c3e0281404fbba517eace5a820807|1624342271379; wxa_level=1; retina=1; cid=9; jxsid=16243422744449775979; webp=1; mba_muid=1609290917531408410078; visitkey=70461066257072412; 3AB9D23F7A4B3C9B=O22M5P3AALBGRT3PVURKXIMVBLA6AXVIF7MPR4KORJCXHUSB5EPASC4A6YDEUEL5RHCFLFWRTOIRCVY4DXWSB2XNGQ; TrackerID=yltj_c5Ci_STywFwzelptztXsSDi2lcJ5n4uA0GCNnZNNsN3CVHU7r2d6e-sg9CW_4j7c485MiJzKNN738UeCFTapeosOy8CUc1gTMeVUbM5HI89BDSOtAeb_csaaOBCsUqyJlYrfZUXYFeg21Qc4g; pt_key=AAJg0X8VADAVMkI5oxnm7GQHoHkbftwx8N12jlpvvteypoLh9MwZoiWAaiilMzskisj4fa7w3tU; pt_pin=360506239-683129; pt_token=oiw6a6ss; pwdt_id=360506239-683129; sfstoken=tk01m11421e72a8sMisxNVVSZVhyahm0onOSghhtjvmdf6/rwBeRRhGXHtYw5ph27Oguwzld+cfHY2qniqmK3hDt4uXx; PPRD_P=UUID.1609290917531408410078; jxsid_s_u=https%3A//home.m.jd.com/myJd/newhome.action; sc_width=414; shshshfp=8ffcfcc243c71943c504f06dcbf0310b; wqmnx1=MDEyNjM4MXRvLmRlP2wmMDJsKCBvM2tTbC81LGVyLmk0aTNZbkIxVUYhSA%3D%3D; __jdb=76161171.14.1609290917531408410078|66.1624341048; mba_sid=1624342274521373005045536385.6; __wga=1624342629738.1624342294915.1624342294915.1624342294915.4.1; jxsid_s_t=1624342629790; shshshsID=993a20119f6687073c04141614e1ee5a_12_1624342629964; __jd_ref_cls=MCommonBottom_My' //单引号内自行填写您抓取的Cookie
 
 var DualKey = '' //如需双账号签到,此处单引号内填写抓取的"账号2"Cookie, 否则请勿填写
 
@@ -33,13 +33,13 @@ var DualKey = '' //如需双账号签到,此处单引号内填写抓取的"账�
 
 初次使用时, app配置文件添加脚本配置,并启用Mitm后, Safari浏览器打开登录 https://bean.m.jd.com/bean/signIndex.action ,点击签到并且出现签到日历后, 如果通知获得cookie成功, 则可以使用此签到脚本。 注: 请勿在京东APP内获取!!!
 
-由于cookie的有效性(经测试网页Cookie有效周期最长31天)，如果脚本后续弹出cookie无效的通知，则需要重复上述步骤。 
+由于cookie的有效性(经测试网页Cookie有效周期最长31天)，如果脚本后续弹出cookie无效的通知，则需要重复上述步骤。
 签到脚本将在每天的凌晨0:05执行, 您可以修改执行时间。 因部分接口京豆限量领取, 建议调整为凌晨签到。
 
 BoxJs订阅地址: https://raw.githubusercontent.com/NobyDa/Script/master/NobyDa_BoxJs.json
 
 *************************
-【 配置双京东账号签到说明 】 : 
+【 配置双京东账号签到说明 】 :
 *************************
 
 正确配置QX、Surge、Loon后, 并使用此脚本获取"账号1"Cookie成功后, 请勿点击退出账号(可能会导致Cookie失效), 需清除浏览器资料或更换浏览器登录"账号2"获取即可.
@@ -80,7 +80,7 @@ hostname = api.m.jd.com
 5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png,enabled=true
 
 [rewrite_local]
-# 获取京东Cookie. 
+# 获取京东Cookie.
 # 注意此为远程路径, 低版本用户请自行调整为本地路径.
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
@@ -130,15 +130,15 @@ async function all() {
         JingRongDoll(stop, 'JRFiveDoll', '京东金融-签伍', '1D06AA3B0F'),
       ])
       await Promise.all([
-        JDUserSignPre(stop, 'JDShoes', '京东商城-鞋靴', '4RXyb1W4Y986LJW8ToqMK14BdTD'), //京东鞋靴
+        // JDUserSignPre(stop, 'JDShoes', '京东商城-鞋靴', '4RXyb1W4Y986LJW8ToqMK14BdTD'), //京东鞋靴
         JDUserSignPre(stop, 'JDCalendar', '京东日历-翻牌', '36V2Qw59VPNsuLxY84vCFtxFzrFs'), //京东日历翻牌
         JDUserSignPre(stop, 'JDChild', '京东商城-童装', '3Af6mZNcf5m795T8dtDVfDwWVNhJ'), //京东童装馆
         JDUserSignPre(stop, 'JDBaby', '京东商城-母婴', '3BbAVGQPDd6vTyHYjmAutXrKAos6'), //京东母婴馆
         JDUserSignPre(stop, 'JD3C', '京东商城-数码', '4SWjnZSCTHPYjE5T7j35rxxuMTb6'), //京东数码电器馆
         // JDUserSignPre(stop, 'JDSubsidy', '京东晚市-补贴', 'xK148m4kWj5hBcTPuJUNNXH3AkJ'), //京东晚市补贴金
-        JDUserSignPre(stop, 'JDWomen', '京东商城-女装', 'DpSh7ma8JV7QAxSE2gJNro8Q2h9'), //京东女装馆
+        // JDUserSignPre(stop, 'JDWomen', '京东商城-女装', 'DpSh7ma8JV7QAxSE2gJNro8Q2h9'), //京东女装馆
         JDUserSignPre(stop, 'JDFineWine', '京东商城-酒饮', 'zGwAUzL3pVGjptBBGeYfpKjYdtX'), //京东酒饮馆
-        JDUserSignPre(stop, 'JDBook', '京东商城-图书', '3SC6rw5iBg66qrXPGmZMqFDwcyXi'), //京东图书
+        // JDUserSignPre(stop, 'JDBook', '京东商城-图书', '3SC6rw5iBg66qrXPGmZMqFDwcyXi'), //京东图书
         JingRongDoll(stop, 'JTDouble', '京东金贴-双签', '1DF13833F7'), //京东金融 金贴双签
         JingRongDoll(stop, 'XJDouble', '金融现金-双签', 'F68B2C3E71', '', '', '', 'xianjin'), //京东金融 现金双签
       ])
@@ -202,16 +202,16 @@ async function all() {
       await JDUserSignPre(Wait(stop), 'JDClothing', '京东商城-服饰', '4RBT3H9jmgYg1k2kBnHF8NAHm7m8') //京东服饰
       await JDUserSignPre(Wait(stop), 'JDSchool', '京东商城-校园', '2QUxWHx5BSCNtnBDjtt5gZTq7zdZ') //京东校园
       await JDUserSignPre(Wait(stop), 'JDHealth', '京东商城-健康', 'w2oeK5yLdHqHvwef7SMMy4PL8LF') //京东健康
-      await JDUserSignPre(Wait(stop), 'JDShoes', '京东商城-鞋靴', '4RXyb1W4Y986LJW8ToqMK14BdTD') //京东鞋靴
+      // await JDUserSignPre(Wait(stop), 'JDShoes', '京东商城-鞋靴', '4RXyb1W4Y986LJW8ToqMK14BdTD') //京东鞋靴
       await JDUserSignPre(Wait(stop), 'JDCalendar', '京东日历-翻牌', '36V2Qw59VPNsuLxY84vCFtxFzrFs') //京东日历翻牌
       await JDUserSignPre(Wait(stop), 'JDChild', '京东商城-童装', '3Af6mZNcf5m795T8dtDVfDwWVNhJ') //京东童装馆
       await JDUserSignPre(Wait(stop), 'JDBaby', '京东商城-母婴', '3BbAVGQPDd6vTyHYjmAutXrKAos6') //京东母婴馆
       await JDUserSignPre(Wait(stop), 'JD3C', '京东商城-数码', '4SWjnZSCTHPYjE5T7j35rxxuMTb6') //京东数码电器馆
       // await JDUserSignPre(Wait(stop), 'JDSubsidy', '京东晚市-补贴', 'xK148m4kWj5hBcTPuJUNNXH3AkJ'); //京东晚市补贴金
       // await JDUserSignPre(Wait(stop), 'JDClocks', '京东商城-钟表', '2BcJPCVVzMEtMUynXkPscCSsx68W'); //京东钟表馆
-      await JDUserSignPre(Wait(stop), 'JDWomen', '京东商城-女装', 'DpSh7ma8JV7QAxSE2gJNro8Q2h9') //京东女装馆
+      // await JDUserSignPre(Wait(stop), 'JDWomen', '京东商城-女装', 'DpSh7ma8JV7QAxSE2gJNro8Q2h9') //京东女装馆
       // await JDUserSignPre(Wait(stop), 'JDPet', '京东商城-宠物', '37ta5sh5ocrMZF3Fz5UMJbTsL42'); //京东宠物馆
-      await JDUserSignPre(Wait(stop), 'JDBook', '京东商城-图书', '3SC6rw5iBg66qrXPGmZMqFDwcyXi') //京东图书
+      // await JDUserSignPre(Wait(stop), 'JDBook', '京东商城-图书', '3SC6rw5iBg66qrXPGmZMqFDwcyXi') //京东图书
       await JDUserSignPre(Wait(stop), 'JDShand', '京东拍拍-二手', '3S28janPLYmtFxypu37AYAGgivfp') //京东拍拍二手
       await JDUserSignPre(Wait(stop), 'JDMakeup', '京东商城-美妆', '2smCxzLNuam5L14zNJHYu43ovbAP') //京东美妆馆
       await JDUserSignPre(Wait(stop), 'JDFineWine', '京东商城-酒饮', 'zGwAUzL3pVGjptBBGeYfpKjYdtX') //京东酒饮馆
